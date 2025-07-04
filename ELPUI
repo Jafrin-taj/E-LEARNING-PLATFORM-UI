@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Learning Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #005fa3;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
+    }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .course {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .course h3 {
+      margin-top: 0;
+    }
+    .progress-bar {
+      background: #ccc;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .progress {
+      background: #0077cc;
+      height: 10px;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .instructor {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #005fa3;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CODE-HUB</h1>
+    <p>Learn Anytime, Anywhere</p>
+  </header>
+
+  <nav>
+    <a href="#courses">Courses</a>
+    <a href="#trending">Trending</a>
+    <a href="#internships">Internships</a>
+    <a href="#progress">My Progress</a>
+    <a href="#videos">Videos</a>
+    <a href="#instructors">Instructors</a>
+  </nav>
+
+  <section id="courses">
+    <h2>Available Courses</h2>
+    <div class="courses">
+      <div class="course">
+        <h3>HTML & CSS Basics</h3>
+        <p>Learn how to structure web pages using HTML and style them with CSS.</p>
+      </div>
+      <div class="course">
+        <h3>JavaScript Fundamentals</h3>
+        <p>Understand the basics of JavaScript to make your websites interactive.</p>
+      </div>
+      <div class="course">
+        <h3>React for Beginners</h3>
+        <p>Build dynamic UIs with the React JavaScript library.</p>
+      </div>
+      <div class="course">
+        <h3>Node.js Essentials</h3>
+        <p>Learn server-side JavaScript using Node.js and Express framework.</p>
+      </div>
+      <div class="course">
+        <h3>Python for Data Science</h3>
+        <p>Analyze data, visualize results, and build models using Python.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ New: Trending Courses -->
+  <section id="trending">
+    <h2>Trending Courses 🔥</h2>
+    <div class="courses">
+      <div class="course">
+        <h3>AI with Python</h3>
+        <p>Master the fundamentals of Artificial Intelligence and machine learning with Python.</p>
+      </div>
+      <div class="course">
+        <h3>Full-Stack Web Development</h3>
+        <p>Build real-world web apps using MERN stack (MongoDB, Express, React, Node.js).</p>
+      </div>
+      <div class="course">
+        <h3>Data Structures & Algorithms</h3>
+        <p>Crack coding interviews by mastering core computer science concepts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ New: Internship Offers -->
+  <section id="internships">
+    <h2>Internship Offers 💼</h2>
+    <div class="courses">
+      <div class="course">
+        <h3>Frontend Intern - TechNova</h3>
+        <p>Work with React and Tailwind CSS on real client projects. Duration: 3 months. Remote.</p>
+      </div>
+      <div class="course">
+        <h3>Backend Intern - CodeForge</h3>
+        <p>Join a Node.js development team and gain hands-on API experience. Duration: 2 months.</p>
+      </div>
+      <div class="course">
+        <h3>Data Analyst Intern - DataBridge</h3>
+        <p>Assist in analyzing real datasets using Python, pandas, and Power BI. Duration: 4 months.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="progress">
+    <h2>My Progress</h2>
+    <div>
+      <h3>HTML & CSS Basics</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 80%;"></div>
+      </div>
+      <h3>JavaScript Fundamentals</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+      </div>
+      <h3>React for Beginners</h3>
+      <div class="progress-bar">
+        <div class="progress" style="width: 30%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Course Videos</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dD2EISBDjWM" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="instructors">
+    <h2>Meet the Instructors</h2>
+    <div class="instructor">
+      <h3>Jafrin</h3>
+      <p>Front-End Developer with 10+ years of experience in HTML, CSS, and React.</p>
+    </div>
+    <div class="instructor">
+      <h3>Jai</h3>
+      <p>Full-Stack Developer specializing in Node.js and MongoDB. Passionate about teaching.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CODE-HUB. All rights reserved.</p>
+  </footer>
+</body>
+</html>
